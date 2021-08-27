@@ -5,9 +5,10 @@ const cors = require('cors');
 // defining the Express app
 const app = express();
 
-const ads = [
-  {title: 'Hello, world !'}
-];
+const greetings = {
+  title: 'Hello, world !',
+  test: 'Healthy'
+};
 
 
 // using bodyParser to parse JSON bodies into JS objects
@@ -18,7 +19,7 @@ app.use(cors());
 
 // defining an endpoint to return all ads
 app.get('/', (req, res) => {
-  res.send(ads);
+  res.send(greetings);
 });
 
 const port = process.env.PORT || 3000
